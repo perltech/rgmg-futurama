@@ -1,0 +1,37 @@
+body {
+	background-color: #80F6ED;
+	color: #A70D1D;
+	font-family: 'Libre Barcode 39 Text', cursive;
+	font-size: 48px;
+	text-align: center;
+}
+
+
+.border {
+	border-style: solid;
+	border-radius: 25px;
+	margin: 20px;
+	padding: 5px;
+}
+
+.hidden-button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    border-radius: 50%;
+    height: 250px;
+    width: 350px;
+}
+
+.hidden-button img{
+	height: 250px;
+    width: 350px;
+}
+
+#gif img{
+	height: 350px;
+	width: 550px;
+}
