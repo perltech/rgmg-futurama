@@ -29,6 +29,9 @@ $('#hypno').on('click', function(){
 	sessionStorage.setItem('hypnoToad', hypnoToad);
 
 	if(sessionStorage.hypnoToad == 5) {
+		// This isn't going to right object
+		// Jump down and select the correct variable by using some kind of logic to determine which
+		// Argument gets passed into $.get() function
 		queryURL = 'https://api.giphy.com/v1/gifs/search?q=hypno+toad&api_key=dc6zaTOxFJmzC&limit=1'
 	}
 
