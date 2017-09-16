@@ -15,14 +15,22 @@ $(document).ready(function() {
 		});
 });
 
+
+var hypnoToad = 0;
+
 $('#hypno').on('click', function(){
 	//Gif generation goes here
 	var queryURL = 'https://api.giphy.com/v1/gifs/random?tag=futurama&api_key=dc6zaTOxFJmzC&limit=1';
-	var hypnoToad = 0;
-
-	sessionStorage.setItem('hypnoToad', hypnoToad);
+	
 	$('#hypno-gif').empty();
+
+	sessionStorage.getItem('hypnoToad', hypnoToad);
 	hypnoToad++;		
+	sessionStorage.setItem('hypnoToad', hypnoToad);
+
+	if(sessionStorage.hypnoToad == 5) {
+		queryURL = 'https://api.giphy.com/v1/gifs/search?q=hypno+toad&api_key=dc6zaTOxFJmzC&limit=1'
+	}
 
 		$.get(queryURL)
 			.done(function(response){
@@ -40,10 +48,7 @@ $('#hypno').on('click', function(){
 			});
 
 	
-	if(hypnoToad == 5) {
-		$('#hypno-gif').empty();
-		queryURL = 'https://api.giphy.com/v1/gifs/random?tag=hypno+toad&api_key=dc6zaTOxFJmzC&limit=1'
-	}
+	
 
 });
 
