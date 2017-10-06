@@ -35,3 +35,16 @@ body {
 	height: 350px;
 	width: 550px;
 }
+
+/*#hypno-gif img{
+	display: inline;
+	margin: 0px;
+}*/
+
+.sm-gif {
+	height: 50px;
+	width: 75px;
+	display: inline;
+	margin: 0px;
+	padding: 0px;	
+}
